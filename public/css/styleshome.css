@@ -1,0 +1,248 @@
+body{
+    margin: 0;
+    padding:0;
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Navbar and header */
+  .logo{
+    padding-left: 40px;
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+  .link {
+    padding: 20px 20px;
+  }
+
+  .myBar{
+    background-color:transparent;
+  }
+  .btn-warning{
+    color: white;
+  }
+  #sec1{
+      background-image: url("../images/home-header.svg");
+      height:600px;
+  }
+
+  .man-laptop{
+      position: absolute;
+      right:7%;
+      top:20%;
+      width:50%;
+      height:60%;
+  }
+
+/* About us */
+.middle{
+    margin-top: 40px;
+    margin-left: 40px;
+    width:95%;
+}
+.about-text{
+
+    margin-left: 40px;
+    width:60%;
+}
+ h1{
+    font-weight: 700;
+}
+.about-text p{
+    padding-top: 20px;
+}
+.about-image{
+    position:relative;
+    left:10%;
+}
+
+.heading{
+    margin-left: 40px;
+}
+
+
+  .flip-card {
+
+    width: 250px;
+    height: 300px;
+    padding:0;
+    border-radius:10px;
+    perspective: 1000px;
+    margin: auto;
+    padding-top: 40px;
+  }
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius:10px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius:10px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    background-color: #E9F3EC;
+    color: black;
+
+  }
+
+
+
+  /* Style the back side */
+  .flip-card-back {
+
+    transform: rotateY(180deg);
+  }
+
+
+  .flip-card p{
+      padding-top: 50px;
+  }
+
+  .card-image{
+      /* position: relative;
+      bottom:50px;
+      left:30px; */
+height: 200px;
+width:200px;
+
+  }
+  .card-name{
+      width:100%;
+      background-color: #5C8D89;
+      border-radius: 0 0 10px 10px;
+      color: white;
+      margin-top:60px;
+  }
+
+
+  #contribute-heading{
+      margin-top: 100px;
+      margin-bottom: 20px;
+  }
+
+  #sec3{
+      background-color: #E9F3EC;
+  }
+  .contribute{
+      background-color: #E9F3EC;
+      width:100%;
+      text-align: center;
+     margin: auto;
+     padding: 50px 0;
+  }
+  h3{
+      font-weight: 700;
+      margin: 20px;
+  }
+  .contribute-image{
+      width:30%;
+      height:30%;
+  }
+
+  .contri-card{
+      padding:0 80px;
+  }
+
+  .testimonial-card{
+    width:100%;
+    background-color: #5C8D89;
+    text-align: center;
+    margin:auto;
+    padding:50px 200px;
+
+  }
+  .testimonial-card img{
+height: 100px;
+width: 150px !important;
+margin:auto;
+  }
+
+  .carousel-section{
+    text-align: center;
+    margin-top:50px;
+  }
+  .carousel-section h1{
+    margin-bottom: 50px;
+  }
+
+   /* footer */
+
+ .footer {
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+
+.footer p {
+  color: #8a8a8a;
+}
+
+.footer h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-col-1 {
+  flex-basis: 30%;
+}
+
+.footer-col-2 {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-col-2 img {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+.footer-col-3,
+.footer-col-4 {
+  flex-basis: 12%;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.app-logo {
+  margin-top: 20px;
+}
+.app-logo img {
+  width: 140px;
+}
+
+.footer hr {
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
