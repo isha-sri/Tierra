@@ -36,7 +36,9 @@ body{
 
   .start{
     background-color: #E9F3EC;
-    background-image: url("/images/Artboard.svg");
+    background-image: url("/images/frame.svg");
+    background-attachment: fixed;
+    background-position: right top;
     background-repeat: no-repeat;
     padding-bottom: 3%;
   }
