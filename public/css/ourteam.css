@@ -90,15 +90,13 @@ letter-spacing: 3px;
   overflow:hidden;
   background-color: white;
   padding-bottom: 3%;
-  
-
 }
 
   
 .flip-card {
 
   width: 250px;
-  height: 200px;
+  height: 300px;
   padding:0;
   border-radius:10px;
   perspective: 1000px;
@@ -140,7 +138,7 @@ letter-spacing: 3px;
 
 /* Style the back side */
 .flip-card-back {
-  font-size: 0.8rem;
+
   transform: rotateY(180deg);
 }
 
@@ -153,7 +151,8 @@ letter-spacing: 3px;
     /* position: relative;
     bottom:50px;
     left:30px; */
-height:100%;
+height: 200px;
+margin-top: 30px;
 
 }
 .card-name{
@@ -161,9 +160,8 @@ height:100%;
     background-color: #5C8D89;
     border-radius: 0 0 10px 10px;
     color: white;
-    margin-top: 0px;
+    margin-top:27px;
 }
-
 
  /* footer */
 

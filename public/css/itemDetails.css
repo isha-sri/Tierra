@@ -301,7 +301,12 @@ background: url(images/zoom-ico.png) left top no-repeat;
   border: 3px solid #5C8D89;
   color: #5C8D89;;
 }
-._p-add-cart .btn-success {
+._p-add-cart .buy-btn:hover {
+  background-color: #5C8D89;
+  border: 3px solid #5C8D89;
+  color: white;
+}
+._p-add-cart .btn:hover {
   background-color: #5C8D89;
   border: 3px solid #5C8D89;
   color: white;
@@ -311,11 +316,19 @@ background: url(images/zoom-ico.png) left top no-repeat;
   padding: 6px 20px;
   /* width: 200px; */
   border-radius: 52px;
+  border: 3px solid #5C8D89;
 }
 ._p-add-cart .btn {
   margin: 0px 8px;
 }
+a {
+  color: #5C8D89;
+  text-decoration: none;
+}
+a:hover{
+  color: white;
 
+}
 #sell-page{
   margin-top: 0;
   border-radius:2%;
@@ -400,76 +413,4 @@ color: white;
 
 
 
- /* footer */
-
- .footer {
-  background: #000;
-  color: #8a8a8a;
-  font-size: 14px;
-  padding: 60px 0 20px;
-}
-
-.footer p {
-  color: #8a8a8a;
-}
-
-.footer h3 {
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.footer-col-1,
-.footer-col-2,
-.footer-col-3,
-.footer-col-4 {
-  min-width: 250px;
-  margin-bottom: 20px;
-}
-
-.footer-col-1 {
-  flex-basis: 30%;
-}
-
-.footer-col-2 {
-  flex: 1;
-  text-align: center;
-}
-
-.footer-col-2 img {
-  width: 70px;
-  margin-bottom: 20px;
-}
-
-.footer-col-3,
-.footer-col-4 {
-  flex-basis: 12%;
-  text-align: center;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.app-logo {
-  margin-top: 20px;
-}
-.app-logo img {
-  width: 140px;
-}
-
-.footer hr {
-  border: none;
-  background: #b5b5b5;
-  height: 1px;
-  margin: 20px 0;
-}
-
-.copyright {
-  text-align: center;
-}
-
-.menu-icon {
-  width: 28px;
-  margin-left: 20px;
-  display: none;
-}
+ 
