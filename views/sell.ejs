@@ -17,9 +17,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav ms-auto">
-            <li class="navbar-item"><a class="nav-link" href="/home">HOME</a></li>
-            <li class="navbar-item"> <a class="nav-link active" style="color:#5C8D89; font-weight: bold;" aria-current="page" href="#">SHOP</a></li>
-            <li class="navbar-item"><a class="nav-link" href="/itemDetails">SELL</a></li>
+            <li class="navbar-item"><a class="nav-link" href="/">HOME</a></li>
+            <li class="navbar-item"> <a class="nav-link" href="/shop">SHOP</a></li>
+            <li class="navbar-item"><a class="nav-link active" style="color:#5C8D89; font-weight: bold;" aria-current="page" href="#">SELL</a></li>
             <li class="navbar-item"><a class="nav-link" href="/ourteam">TEAM</a></li>
             <li class="navbar-item"><button type="button" class="btn btn-warning">SIGN IN</button></li>
 
@@ -28,31 +28,37 @@
       </nav>
     </div>
   </section>
+
+  <section id="title">
   <div class="top">
-    <img src="images/man.png" class="man" align="left" alt="man">
+    
     <div class="two">
       <h2>LET'S MAKE</h2>
-      <h1>Sustainability</h1>
-      <h2 align="right">A HABIT</h2>
+      <h1><b>SUSTAINABILITY </b> <span class="habit">A HABIT</span></h1>
     </div>
-  <br><br><br><br><br><br><br>
-  <div class="three">
-    <img src="images/mail.png" align="right" alt="man">
-    <br><br><br><br>
-    <p class="steps"><b>STEPS TO FOLLOW:</b></p>
-    <div class="list">
-      <ul>
-      <li>Sign up to Title.com with your account</li>
-      <li>Verify your email-address</li>
-      <li>Complete your seller profile</li>
-      <li>Add product details, product description and  images and other relevant information</li>
-      <li>Click submit and you are GOOD TO GO!</li>
-    </ul>
+  <br><br><br><br><br><br><br><br><br>
+  </div>
+  </section>
+
+  <section id="rules">
+    <div class="three">
+      <p class="steps"><b>STEPS TO FOLLOW:</b></p>
     </div>
-  </div>
-  </div>
-  <div class="buttons">
-    <button class="button button1" href = "/sellform">Become a seller</button>
-    <button class="button button2">Existing seller</button>
-  </div>
+      <div class="list">
+        <ol>
+        <li>Sign up to Title.com with your account</li>
+        <li>Verify your email-address</li>
+        <li>Complete your seller profile</li>
+        <li>Add product details, product description and  images and other relevant information</li>
+        <li>Click submit and you are GOOD TO GO!</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id = "seller_button">
+    <div class="buttons">
+      <button class="button button1" href = "/sellform">Become a seller</button>
+      <button class="button button2">Existing seller</button>
+    </div>
+  </section>
   <%-include ("partials/footer") -%>
