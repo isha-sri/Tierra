@@ -34,7 +34,6 @@ nav{
   background-image: url("/images/frame.svg");
   background-position: right top;
   background-repeat: no-repeat;
-  padding-bottom: 3%;
 }
 
 .btn-warning{
@@ -65,8 +64,8 @@ nav{
 }
 
 .two{
-  margin-top: 40px;
-  padding-top: 20px;
+  text-align: center;
+  padding-top: 40px;
 }
 
 .three{
@@ -75,7 +74,7 @@ nav{
   padding: 20px;
   text-align: center;
 }
-p{
+.steps{
   margin-top: 20px;
   padding-top: 20px;
   padding-left: 20px;
@@ -119,7 +118,7 @@ line-height: 20px;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 4px 8px;
   margin-top: 20px;
   transition-duration: 0.4s;
   cursor: pointer;
