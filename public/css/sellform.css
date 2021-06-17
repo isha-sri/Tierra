@@ -120,87 +120,88 @@ nav{
   /*sellform*/
   .form{
       background-color: #ffffff;
-      
+      margin-left: 1.5%;
+      margin-top: 1%;
+      margin-right: 1.5%;
+
   }
 
   .welcome{
       margin-left: 50px;
       padding-top: 80px;
   }
-  
-  
-  
-   /* footer */
-  
-   .footer {
-    background: #000;
-    color: #8a8a8a;
-    font-size: 14px;
-    padding: 60px 0 20px;
+
+  .namemargin{
+      margin-left: 100px;
+      margin-bottom: 20px;
+  }
+  .formstatement{
+      margin-top: 80px;
+      margin-left:110px;
+      margin-bottom: 15px;
+  }
+  .quantity{
+      margin-left: 110px;
+      margin-bottom: 15px;
+  }
+  .inr{
+      margin-left: 100px;
+  }
+  .checkboxnego{
+      margin-left: 100px;
+      
+  }
+  .addetails{
+    margin-left:110px;
+    margin-top: 60px;
+  }
+  .checkme{
+    margin-left:110px;
+    margin-bottom: 100px;
+  }
+  .paddinglabel{
+      padding-left: 15px;
   }
   
-  .footer p {
-    color: #8a8a8a;
-  }
-  
-  .footer h3 {
-    color: #ffffff;
-    margin-bottom: 20px;
-  }
-  
-  .footer-col-1,
-  .footer-col-2,
-  .footer-col-3,
-  .footer-col-4 {
-    min-width: 250px;
-    margin-bottom: 20px;
-  }
-  
-  .footer-col-1 {
-    flex-basis: 30%;
-  }
-  
-  .footer-col-2 {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .footer-col-2 img {
-    width: 70px;
-    margin-bottom: 20px;
-  }
-  
-  .footer-col-3,
-  .footer-col-4 {
-    flex-basis: 12%;
-    text-align: center;
-  }
-  
-  ul {
-    list-style-type: none;
-  }
-  
-  .app-logo {
-    margin-top: 20px;
-  }
-  .app-logo img {
-    width: 140px;
-  }
-  
-  .footer hr {
+  /* button */
+  .button {
+    background-color: #74B49B;
     border: none;
-    background: #b5b5b5;
-    height: 1px;
-    margin: 20px 0;
-  }
-  
-  .copyright {
+    color: white;
+    padding: 16px 32px;
     text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+  }
+
+  
+.button2 {
+    background-color:#74B49B;
+    color: white;
+    border: 2px solid #74B49B;
   }
   
-  .menu-icon {
-    width: 28px;
-    margin-left: 20px;
-    display: none;
+  .button2:hover {
+    background-color: white;
+    color: #74B49B;
   }
   
+   .sellformimg{
+       width:50%;
+       display: block;
+       margin:auto;
+       margin-right: 15px;
+   }
+   .imageposition {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    transform: translateY(-50%);
+    height: 300px;
+}
+
