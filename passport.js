@@ -22,3 +22,16 @@ passport.use(new GoogleStrategy({
     return done(null, profile);
   }
 ));
+
+
+passport.use(new GoogleStrategy({
+  clientID:process.env.GOOGLE_CLIENT_ID_SELL,
+  clientSecret:process.env.GOOGLE_CLIENT_SECRET_SELL,
+  callbackURL: "http://localhost:3000/auth/google/login-seller",
+  passReqToCallback:true
+},
+function(request, accessToken, refreshToken, profile, done) {
+  console.log(profile)
+  return done(null, profile);
+}
+));
