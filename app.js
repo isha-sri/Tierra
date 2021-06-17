@@ -32,6 +32,12 @@ app.get("/sellform/", function(req, res){
 })
 
 
+app.get("/payment/", function(req, res){
+  res.render("payment");
+})
+app.get("/splashScreen/", function(req, res){
+  res.render("splashScreen");
+})
 app.listen("3000", function(req, res){
   console.log("Server running on port 3000");
 })

@@ -1,157 +1,167 @@
 body{
-    overflow-x: hidden;
-      background-color: #E9F3EC;
-  }
-
-  .container{
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .row{
-    margin-left: 0;
-    margin-right: 0;
-
-  }
-
-  /* NAVIGATION SECTION */
-
-  nav{
-    padding-right: 1.5%;
-  }
-
-  .logo{
-    width: 10%;
-  }
-
-  .brand-name{
-    color: #5C8D89;
-    font-size: 1.6rem;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .navbar-item{
-    padding: 2px;
-    font-size: 0.8rem;
-  }
-
-  .start{
-    background-color: #E9F3EC;
-    background-image: url("/images/frame.svg");
-    background-attachment: fixed;
-    background-position: right top;
-    background-repeat: no-repeat;
-    padding-bottom: 3%;
-  }
-
-  .btn-warning{
-    color: white;
-    font-size: 0.8rem;
-  }
-
-
-  #titleSection{
-
-    background-image: url('/images/ourteamtitle.png');
-    height: calc(100vh - 73px);
-    background-size: 100% 100%;
-
-     background-color:white;
-  }
-
-
-  .ourteam{
-    margin: 3%;
-    }
-
-#ourteam-page{
-  margin-top: 0;
-  border-radius:2%;
-  overflow:hidden;
+  overflow-x: hidden;
   background-color: white;
 }
 
-.column {
-  text-align: center;
-  width: 20%;
-  padding: 10px;
+.container{
+  margin-left: 0;
+  margin-right: 0;
+}
+.row{
+  margin-left: 0;
+  margin-right: 0;
+
 }
 
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+/* NAVIGATION SECTION */
+
+nav{
+  padding-right: 1.5%;
 }
 
-.name{
-  margin-left : 50px;
-  font-size: 1rem;
+.logo{
+  width: 10%;
+}
+
+.brand-Name{
+  color: #5C8D89;
+  font-size: 1.6rem;
+  text-decoration: none;
   font-weight: bold;
 }
 
-.quality{
-  margin-left : 50px;
+.navbar-item{
+  padding: 2px;
+  font-size: 0.8rem;
+}
+
+.start{
+  background-color: #E9F3EC;
+  background-image: url("/images/Artboard.svg");
+  background-repeat: no-repeat;
+  
+}
+
+.btn-warning{
+  color: white;
+  font-size: 0.8rem;
+}
+
+/* TITLE SECTION */
+
+
+.title-image{
+  margin-left: 0px;
+  padding-left: 0;
+}
+
+.title-text{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.title-text p{
   font-size: 0.9rem;
 }
 
-.imgsizing{
-
-  border-radius: 50%;
-    height : 170px;
-    width : 170px;
-   margin : 30px;
-  }
-
-  .container.container.overlayeffects {
-    position: relative;
-
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-
-  }
-
-  .container.overlayeffects:hover .overlay {
-    opacity: 1;
-  }
-
-
-
-
-.card{
-  border-radius:5%;
-  background-color:#E9F3EC;
-  border:none;
-  margin: 20px;
-  margin-left: 40px;
+.highlighted-text{
+  color: #5C8D89;
+  font-size: 2.5rem;
+  font-weight: bold;
 
 }
 
-.cardimg{
-  border-radius: 50%;
-  height : 120px;
-  width : 120px;
-  margin-left: 40px;
-  margin-top: 10px;
-}
+/* TEAM PAGE SECTION */
 
-.card-title{
+.heading{
   text-align: center;
+  margin-top: 40px;
+  margin-left: 40px;
+  font-family: Raleway;
+font-weight: bold;
+font-size: 26px;
+letter-spacing: 3px;
+  font-weight: 700;
 }
-.card-text{
+
+#ourteam-page{
+  margin: auto;
+  border-radius:2%;
+  overflow:hidden;
+  background-color: white;
+  padding-bottom: 3%;
+}
+
+  
+.flip-card {
+
+  width: 250px;
+  height: 300px;
+  padding:0;
+  border-radius:10px;
+  perspective: 1000px;
+  margin: auto;
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
+  border-radius:10px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius:10px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  background-color: #E9F3EC;
+  color: black;
+
 }
 
 
+
+/* Style the back side */
+.flip-card-back {
+
+  transform: rotateY(180deg);
+}
+
+
+.flip-card p{
+    padding-top: 50px;
+}
+
+.card-image{
+    /* position: relative;
+    bottom:50px;
+    left:30px; */
+height: 200px;
+margin-top: 30px;
+
+}
+.card-name{
+    width:100%;
+    background-color: #5C8D89;
+    border-radius: 0 0 10px 10px;
+    color: white;
+    margin-top:27px;
+}
 
  /* footer */
 
