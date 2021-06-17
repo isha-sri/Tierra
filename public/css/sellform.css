@@ -1,144 +1,140 @@
+body
+{ background-color: #E9F3EC;
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif;
+  padding:0;
+  margin: 0;
+}
+
+
 /* NAVIGATION SECTION */
 
 nav{
-    padding-right: 1.5%;
-  }
-  
-  .logo{
-    width: 10%;
-  }
-  
-  .brand-Name{
-    color: #5C8D89;
-    font-size: 1.6rem;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .navbar-item{
-    padding: 2px;
-    font-size: 0.8rem;
-  }
-  
-  .start{
-    background-color: #E9F3EC;
-    background-image: url("/images/frame.svg");
-    background-position: right top;
-    background-repeat: no-repeat;
-    padding-bottom: 3%;
-  }
-  
-  .btn-warning{
-    color: white;
-    font-size: 0.8rem;
-  }
-  
-  
-  
-  
-  body
-  { background-color: #E9F3EC;
-    overflow-x: hidden;
-    font-family: 'Raleway', sans-serif;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-    border-left: 0;
-    border-right: 0;
-    margin-bottom: 0;
-  
-  }
-  
-  h1
-  { font-size:562.5%;
-    color:#5C8D89;
-    font-family: 'Raleway', sans-serif;
-  
-  }
-  
-  h2{
-    color:black;
-    font-size:2rem;
-    font-family: 'Raleway', sans-serif;
-    font-weight: normal;
-    line-height: 1.6;
-    margin-right: 277px;
-  }
-  .top{
-    margin-top: 200px;
-  
-  }
-  
-  
-  .three{
-    background-color: white;
-    margin:0;
-    text-align: left;
-    width: 100%;
-    padding-bottom: : 0;
-    border-bottom: : 0;
-  }
-  p{
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
-    font-size:2rem;
-  }
-  ul{
-    font-size: 1.5rem;
-    font-weight: normal;
-    line-height: 1.6;
-    margin-top: 20px;
-  }
-  .man{
-    height: 582px;
-    width: 500px;
-  }
-  .steps{
-    text-align: left;
-  }
-  .list{
-    background-color: #E9F3EC;
-    width: 1100px;
-  
-  }
-  .buttons{
-    background-color: white;
-    height: 300px;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-  .footer{
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
+  padding-right: 1.5%;
+}
+
+.logo{
+  width: 10%;
+}
+
+.brand-Name{
+  color: #5C8D89;
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-item{
+  padding: 2px;
+  font-size: 0.8rem;
+}
+
+.start{
+  background-color: #E9F3EC;
+  background-image: url("/images/frame.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+.btn-warning{
+  color: white;
+  font-size: 0.8rem;
+}
+
+.two h1
+{ 
+  margin: auto;
+  font-size: 2.5rem;
+  color:#5C8D89;
+  font-family: 'Raleway', sans-serif;
+}
+
+.two h2{
+  color:black;
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+  line-height: 1.6;
+  margin-right: 277px;
+}
+
+.habit{
+  color: black !important;
+  font-size: 1rem;
+}
+
+.two{
+  text-align: center;
+  padding-top: 40px;
+}
+
+.three{
+  background-color: white;
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+}
+.steps{
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size:2rem;
+}
+ol{
+  font-size: 0.9rem;
+  padding-top: 20px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+.man{
+  height: 582px;
+  width: 500px;
+}
+.steps{
+  font-family: Raleway;
+font-weight: bold;
+font-size: 22px;
+letter-spacing: 3px;
+line-height: 20px;
+}
+.list{
+  background-color: #E9F3EC;
+  width: 1100px;
+}
+.buttons{
+  background-color: white;
+  height: 150px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
   /*sellform*/
   .form{
       background-color: #ffffff;
-      margin-left: 1.5%;
+      margin-left: 5%;
       margin-top: 1%;
-      margin-right: 1.5%;
+      margin-right: 5%;
+      margin-bottom: 60px;
 
   }
 
   .welcome{
       margin-left: 50px;
       padding-top: 80px;
+      font-size: 1.2rem;
   }
 
   .namemargin{
       margin-left: 100px;
-      margin-bottom: 20px;
+      text-align: center;
+      
   }
   .formstatement{
-      margin-top: 80px;
+      margin-top: 40px;
       margin-left:110px;
       margin-bottom: 15px;
+      font-size: 1rem;
   }
   .quantity{
       margin-left: 110px;
@@ -165,32 +161,27 @@ nav{
   
   /* button */
   .button {
-    background-color: #74B49B;
-    border: none;
-    color: white;
-    padding: 16px 32px;
+    background-color: white;
+    color:#74B49B;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
-    font-size: 12px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 8px;
+    margin-top: 20px;
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 10px;
+    border: 2px solid #74B49B;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.6rem;
+  }
+  
+  .button:hover {
+    background-color: #74B49B;
+    color: white;
   }
 
-  
-.button2 {
-    background-color:#74B49B;
-    color: white;
-    border: 2px solid #74B49B;
-  }
-  
-  .button2:hover {
-    background-color: white;
-    color: #74B49B;
-  }
-  
    .sellformimg{
        width:50%;
        display: block;
