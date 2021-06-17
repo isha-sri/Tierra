@@ -1,96 +1,77 @@
 <%- include("partials/header") -%>
 <link rel="stylesheet" href="/css/home.css">
-<section id="sec1">
 
+<section id="start" class="start">
 
-
-
-    <nav class="navbar navbar-expand-lg navbar-light myBar">
-        <img src="images/logo.svg" class="logo">
-        <a class="navbar-brand logo" href="#"> Title</a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+  <!-- NAVIGATION BAR -->
+  <section id="navigation">
+    <div class="container-fluid navigation">
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a href="#" class="brand-Name"> <img src="images\logo.png" alt="" class="d-inline-block align-text-top logo">TITLE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-        <div class="collapse navbar-collapse text-right" id="navbarNav">
-          <ul class="navbar-nav ms-auto ">
-            <li class="nav-item link">
-              <a href="#" class="nav-link" >Home</a>
-            </li>
-            <li class="nav-item dropdown link">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Shop
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Raw Materials</a>
-                  <a class="dropdown-item" href="#">Upcycled Products</a>
-                  <a class="dropdown-item" href="#">Thrift Shopping</a>
-                  </div>
-              </li>
-              <li class="nav-item dropdown link">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Sell
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Raw Materials</a>
-                  <a class="dropdown-item" href="#">Upcycled Products</a>
-                  <a class="dropdown-item" href="#">Thrifting</a>
-                  </div>
-              </li>
-            <li class="nav-item link">
-              <a href="#" class="nav-link">Team</a>
-            </li>
-
-            <li class="nav-item link"><button type="button" class="btn btn-warning">SIGN IN</button></li>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ms-auto">
+            <li class="navbar-item"><a class="nav-link active" style="color:#5C8D89; font-weight: bold;" aria-current="page" href="#">HOME</a></li>
+            <li class="navbar-item"> <a class="nav-link" href="/shop">SHOP</a></li>
+            <li class="navbar-item"><a class="nav-link" href="/sell">SELL</a></li>
+            <li class="navbar-item"><a class="nav-link" href="/ourteam">TEAM</a></li>
+            <li class="navbar-item"><button type="button" class="btn btn-warning">SIGN IN</button></li>
 
           </ul>
-    </nav>
-
-   <img src="images/home-man.png" class="man-laptop" alt="">
+        </div>
+      </nav>
+    </div>
   </section>
 
-  <section id="sec2">
-      <div class="container row middle">
-          <div class="about-text col">
-        <h1>ABOUT US</h1>
-        <p>We wanted to create a platform that can help sustaining the environment, and encourage people that believe in doing so. We are preaching the message that every single one of you can contribute towards a better Earth, you just need the right awareness and opportunities.
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        </p>
-      </div>
-      <div class="about-image col">
-          <img src="images/home-group.png" alt="">
+  <!-- TITLE SECTION -->
+
+  <section id="titleSection">
+
+    <div class="container shop">
+      <div class="row title-row">
+        <div class="col-lg-6 title-image">
+          <img src="\images\home-man.png" alt="image">
+        </div>
+        <div class="col-lg-6 title-text">
+          <h4 class="highlighted-text"></h4>
+          <p></p>
+        </div>
       </div>
     </div>
 
-<div class="container row middle">
+  </section>
+
+ <!-- DEAL, CATEGORIES -->
+
+ <section id="sec2">
+  <div class="container row upper">
+    <div class="about-text col">
+  <h1>ABOUT US</h1>
+  <p>We wanted to create a platform that can help sustaining the environment, and encourage people that believe in doing so. We are preaching the message that every single one of you can contribute towards a better Earth, you just need the right awareness and opportunities.
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+  </p>
+</div>
+<div class="about-image col">
+    <img src="images/home-group.png" alt="">
+</div>
+</div>
+
+<div class="container row upper">
 <h1 class="heading">WHY SHOP WITH US?</h1>
-
-<div class="col-lg-4"> <div class="flip-card col-lg-4">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src="images/home-warrior.png" class="card-image" alt="Avatar" >
-        <button type="button" class="btn card-name">Warrior Points</button>
-      </div>
-      <div class="flip-card-back">
-
-        <p>With every purchase you make, you get 10% of the cost as Earth warrior points. After every 1000 points, you get a surprise!</p>
-
-      </div>
-    </div>
-  </div></div>
 
 <div class="col-lg-4"><div class="flip-card">
 <div class="flip-card-inner">
-  <div class="flip-card-front">
-    <img src="images/home-plant.png" class="card-image" alt="Avatar" >
-    <button type="button" class="btn card-name">Plant a tree</button>
-  </div>
-  <div class="flip-card-back">
+<div class="flip-card-front">
+<img src="images/home-warrior.png" class="card-image" alt="Avatar" >
+<button type="button" class="btn card-name">Warrior Points</button>
+</div>
+<div class="flip-card-back">
 
-    <p>After every 10 orders that you place, we plant a tree! </p>
+<p>With every purchase you make, you get 10% of the cost as Earth warrior points. After every 1000 points, you get a surprise!</p>
 
-  </div>
+</div>
 </div>
 </div>
 </div>
@@ -98,27 +79,39 @@
 <div class="col-lg-4">
 <div class="flip-card">
 <div class="flip-card-inner">
-  <div class="flip-card-front">
-    <img src="images/home-leaf.png" class="card-image" alt="Avatar" >
-    <button type="button" class="btn card-name">Helping nature</button>
-  </div>
-  <div class="flip-card-back">
+<div class="flip-card-front">
+<img src="images/home-leaf.png" class="card-image" alt="Avatar" >
+<button type="button" class="btn card-name">Helping nature</button>
+</div>
+<div class="flip-card-back">
 
-    <p>With increasing purchases, the small businesses would contribute 1% of their revenues towards preserving nature.</p>
+<p>With increasing purchases, the small businesses would contribute 1% of their revenues towards preserving nature.</p>
 
-  </div>
+</div>
 </div>
 </div></div>
+
+<div class="col-lg-4"><div class="flip-card">
+  <div class="flip-card-inner">
+  <div class="flip-card-front">
+  <img src="images/home-plant.png" class="card-image" alt="Avatar" >
+  <button type="button" class="btn card-name">Plant a tree</button>
+  </div>
+  <div class="flip-card-back">
+  
+  <p>After every 10 orders that you place, we plant a tree! </p>
+  
+  </div>
+  </div>
+  </div>
+  </div>
+
 <center><h1 class="heading" id="contribute-heading">HOW CAN YOU CONTRIBUTE?</h1></center>
 
 </div>
+   </section>
 
-
-
-
-  </section>
-
-  <section id="sec3">
+   <section id="sec3">
     <div class="container row contribute">
         <div class="col-lg-4 contri-card">
             <img class="contribute-image" src="images/planet-earth.png" alt="">
@@ -140,37 +133,42 @@
         </div>
   </section>
 
-  <div id="carouselExampleControls" class="carousel slide carousel-section" data-bs-ride="carousel">
-    <h1 class="heading" id="contribute-heading">TESTIMONIALS</h1>
-    <div class="carousel-inner">
-      <div class="carousel-item active testimonial-card ">
-        <img src="images/profile.png" class="d-block w-100" alt="...">
-        <h4>Name Surname</h4>
-        <p>Job title, Company</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      </div>
-      <div class="carousel-item testimonial-card ">
-        <img src="images/profile.png" class="d-block w-100" alt="...">
-        <h4>Name Surname</h4>
-        <p>Job title, Company</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      </div>
-      <div class="carousel-item testimonial-card ">
-        <img src="images/profile.png" class="d-block w-100" alt="...">
-        <h4>Name Surname</h4>
-        <p>Job title, Company</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      </div>
+</section>
+
+<section id = "testimonials">
+<div id="carouselExampleControls" class="carousel slide carousel-section" data-bs-ride="carousel">
+  <h1 class="heading" id="contribute-heading">TESTIMONIALS</h1>
+  <div class="carousel-inner">
+    <div class="carousel-item active testimonial-card ">
+      <img src="images/profile.png" class="d-block w-100" alt="...">
+      <h4>Name Surname</h4>
+      <p>Job title, Company</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
     </div>
-    <button class="carousel-control-prev carousel-button " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next carousel-button" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="carousel-item testimonial-card ">
+      <img src="images/profile.png" class="d-block w-100" alt="...">
+      <h4>Name Surname</h4>
+      <p>Job title, Company</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+    <div class="carousel-item testimonial-card ">
+      <img src="images/profile.png" class="d-block w-100" alt="...">
+      <h4>Name Surname</h4>
+      <p>Job title, Company</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
   </div>
-  <section >
+  <button class="carousel-control-prev carousel-button " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next carousel-button" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<section >
+
+</section>
 
 <%-include ("partials/footer") -%>
