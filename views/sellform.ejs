@@ -1,5 +1,5 @@
 <%- include("partials/header") -%>
-<link rel="stylesheet" href="/css/sell.css">
+<link rel="stylesheet" href="/css/sellform.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <link rel="icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -28,6 +28,7 @@
       </nav>
     </div>
   </section>
+  <section>
   <div class="top">
     <img src="images/man.png" class="man" align="left" alt="man">
     <div class="two">
@@ -50,9 +51,19 @@
     </ul>
     </div>
   </div>
-  </div>
-  <div class="buttons">
-    <button class="button button1" href = "/sellform">Become a seller</button>
-    <button class="button button2">Existing seller</button>
-  </div>
+  </div></section>
+  <section class = "form">
+     <h2 class="welcome"><b>WELCOME XYZ </b></h2>
+     <form>
+         <div class = "form-row">
+        <div class="form-group">
+           <input type="text" class="form-control col-7" id="exampleFormControlInput1" placeholder="PRODUCT NAME">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control col-md-8" id="exampleFormControlTextarea1" rows="4" placeholder="PRODUCT DESCRIPTION"></textarea>
+        </div></div>
+      </form>
+
+  </section>
+   
   <%-include ("partials/footer") -%>

@@ -22,7 +22,8 @@ nav{
 
 .start{
   background-color: #E9F3EC;
-  background-image: url("/images/Artboard.svg");
+  background-image: url("/images/frame.svg");
+  background-position: right top;
   background-repeat: no-repeat;
   padding-bottom: 3%;
 }
@@ -38,7 +39,7 @@ nav{
 body
 { background-color: #E9F3EC;
   overflow-x: hidden;
-  margin-top: 100px;
+  
   font-family: 'Raleway', sans-serif;
   padding-left: 0;
   padding-right: 0;
@@ -70,9 +71,7 @@ h2{
 
 }
 
-.two{
-background-color: #E9F3EC;
-}
+
 .three{
   background-color: white;
   margin:0;
