@@ -3,6 +3,7 @@ const express =require("express");
 const bodyParser= require("body-parser");
 const ejs = require("ejs");
 const passport = require('passport');
+const passportSell = require('passport');
 const cookieSession = require('cookie-session')
 require('./passport');
 const app= express();
@@ -47,9 +48,9 @@ app.get("/success/", function(req, res){
 app.get("/cart/", function(req, res){
   res.render("cart");
 })
-// app.get("/sell/", function(req, res){
-//   res.render("sell");
-// })
+app.get("/sell/", function(req, res){
+  res.render("sell");
+})
 app.get("/sellform/", function(req, res){
   res.render("sellform");
 })
@@ -74,23 +75,23 @@ app.get('/auth/google/login', passport.authenticate('google', { failureRedirect:
 );
 
 // For selling
-app.get('/sell', (req, res) => res.render('login-seller'))
-app.get('/failed', (req, res) => res.send('You Failed to log in!'))
+// app.get('/sell', (req, res) => res.render('login-seller'))
+// app.get('/failed', (req, res) => res.send('You Failed to log in!'))
 
 
-app.get('/good-seller', isLoggedIn, (req, res) =>{
+// app.get('/good-seller', isLoggedIn, (req, res) =>{
 
-  res.render("sell",{name:"Hello "+ req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value})
-})
+//   res.render("sell",{name:"Hello "+ req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value})
+// })
 
-app.get('/auth/google-seller', passport.authenticate('google', { scope: ['profile', 'email'] }));
+// app.get('/auth/google-seller', passportSell.authenticate('google', { scope: ['profile', 'email'] }));
 
-app.get('/auth/google/login-seller', passport.authenticate('google', { failureRedirect: '/failed' }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/good-seller');
-  }
-);
+// app.get('/auth/google-seller/login-seller', passportSell.authenticate('google', { failureRedirect: '/failed' }),
+//   function(req, res) {
+//     // Successful authentication, redirect home.
+//     res.redirect('/good-seller');
+//   }
+// );
 
 app.get('/logout', (req, res) => {
   req.session = null;
