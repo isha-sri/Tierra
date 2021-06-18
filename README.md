@@ -45,7 +45,7 @@ We believe that nature preservation isn’t limited to curbing pollution and min
 
 ## Long description
 
-[More detail is available here](./docs/tierra.pdf)
+[More detail is available here](./docs/Tierra.pdf)
 
 ## Project roadmap
 
