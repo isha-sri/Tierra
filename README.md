@@ -63,7 +63,7 @@ See below for our proposed schedule on next steps after Call for Code 2021 submi
 
 ## Live demo
 
-You can find a running system to test at [our youtube channel](https://www.youtube.com/watch?v=qwEW4K0dW_w).
+You can find a running system to test at [website](https://tierraweb.herokuapp.com/).
 
 ## Built with
 
