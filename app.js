@@ -8,6 +8,9 @@ const cookieSession = require('cookie-session')
 require('./passport');
 const app= express();
 
+const Cloudant = require("@cloudant/cloudant");
+const { v4: uuidv4 } = require('uuid');
+
 app.use(cookieSession({
   name: 'tuto-session',
   keys: ['key1', 'key2']
@@ -66,6 +69,52 @@ app.get('/failed', (req, res) => res.send('You Failed to log in!'))
 
 
 app.get('/good', isLoggedIn, (req, res) =>{
+
+  cloudant();
+  async function cloudant(){
+    try{
+      console.log("Creating connection with cloudant");
+      const cloudant = Cloudant({
+        url:"https://apikey-v2-30antvp518qnsh4ux4q2218mk91575x2m0p4roj9etbq:3965297d74db5784786a8e3ba733ab15@b68c0960-fa04-4283-be08-958102c4c93b-bluemix.cloudantnosqldb.appdomain.cloud",
+        plugins: {
+          iamauth:{
+            iamApiKey : "dXx8hWWm2oEoYffAXHT39ybXWmD_irXNuvJRubOrAmNo"
+          }
+        }
+      })
+    console.log("Getting cloudant dbs...");
+    const allDBS = await cloudant.db.list();
+    console.log(allDBS);
+    const db = cloudant.db.use("customer-info");
+    let res="";
+
+    db.find({selector:{email:req.user.emails[0].value}}, function(er, result) {
+      if (result.docs.length) {
+  console.log("Already exists");
+  console.log(result);
+  console.log(Object.keys(result).length);
+  }else{
+   console.log("new database created");
+   cloudant();
+   async function cloudant(){
+     const customer_info = {
+       "_id":uuidv4(),
+       "name": req.user.displayName,
+       "email": req.user.emails[0].value,
+       "product_id": 8000,
+       "qty": 10
+     };
+     res= await db.insert(customer_info);
+     console.log("Added successfully to the database"+ res);
+     console.log(res);
+   }
+  }
+    });
+
+  }catch(err){
+    console.log(err);
+  }
+  }
 
   res.render("shop",{name:"Hello "+ req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value})
 })
