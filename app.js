@@ -54,7 +54,12 @@ app.get("/sell/", function(req, res){
 app.get("/sellform/", function(req, res){
   res.render("sellform");
 })
-
+app.get("/payment/", function(req, res){
+  res.render("payment");
+})
+app.get("/address/", function(req, res){
+  res.render("address");
+})
 // For shopping
 app.get('/shop', (req, res) => res.render('login'))
 app.get('/failed', (req, res) => res.send('You Failed to log in!'))
