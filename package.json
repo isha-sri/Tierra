@@ -1,6 +1,9 @@
 { "name": "tierraweb",
   "description": "Our sample Node to Heroku app",
   "main": "app.js",
+  "engines": {
+    "node": "12.18.0"
+    },
   "scripts": {
     "start": "node app.js"
   },
