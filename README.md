@@ -3,7 +3,7 @@ Production of waste materials is increasing everyday. This waste can be recycled
 
 ## Contents
 
-- [Submission or project name](#submission-or-project-name)
+- [Tierra](#submission-or-project-name)
   - [Short description](#short-description)
     - [What are we building?](#what-are-we-building)
     - [What problems are we solving?](#what-problems-are-we-solving)
@@ -18,15 +18,15 @@ Production of waste materials is increasing everyday. This waste can be recycled
 
 ### What are we building?
 
-Part of the World Health Organization's guidance on limiting further spread of COVID-19 is to practice social distancing. As a result, schools in most affected areas are taking precautionary measures by closing their facilities. With school-aged children at home for an indeterminate amount of time, keeping them engaged, entertained, and on top of their education is important.
+Tierra is a portal for small businesses to connect with raw material providers and customers to upcycle as much materials as one can. Think of an invitation card vendor and a small business that makes handmade gifts. Beautiful left-over papers at the vendor could serve as raw materials for the handmade gifts business. Now, think of a dress maker who has leftover cloth pieces that have no use. Now, there are small businesses who make beautiful hair bands out of torn clothes. A cherry on top is that some of them add a small zipper in the hair band which creates a place to keep money and other small things. Think of how many zippers from broken/torn purses can be put to use! All of these were just a few examples. Another initiative to recycle materials is thrifting, which means that people can sell items they no longer need. The platform will also accommodate thrifting solutions for people who are willing to buy reusable stuff in a good condition.
 
 ### What problems are we solving?
 
-Schools and teachers can continue to engage with their students through virtual classrooms, and even create interactive spaces for classes. As parents face a new situation where they may need to homeschool their children, finding appropriate online resources is important as well.
+The idea focusses on the part where even a common man can make a difference by including sustainability in their day to day lives. It will not just help in sustaining nature but, it will also give small scale businesses a platform that appreciates their efforts and helps them rise. When people shop an upcycled product, they prevent extra manufacturing. When people create an upcycled product, they put our resources to better use. When they do this regularly, they bring a change.
 
 ### Why does it matter?
 
-It's imperative that learning and creating can continue when educational institutions have to shift the way they teach in times of crises, such as the COVID-19 pandemic. Providing a set of open source tools, backed by IBM Cloud and Watson Services, will enable educators to more easily make content available for their students.
+We believe that nature preservation isn’t limited to curbing pollution and minimizing global warming. Even the most ordinary efforts can contribute towards building a more sustainable Earth and our solution is proof of it. Tierra is a platform that will help Making sustainability a habit by encouraging upcycling and building a more beautiful Earth
 
 ## Demo video
 
@@ -36,10 +36,10 @@ It's imperative that learning and creating can continue when educational institu
 
 ![Video transcription/translation app](https://developer.ibm.com/developer/tutorials/cfc-starter-kit-speech-to-text-app-example/images/cfc-covid19-remote-education-diagram-2.png)
 
-1. The user navigates to the site and uploads a video file.
-2. Watson Speech to Text processes the audio and extracts the text.
-3. Watson Translation (optionally) can translate the text to the desired language.
-4. The app stores the translated text as a document within Object Storage.
+1. The seller navigates to the site and uploads a video file.
+2. The user selects and buys the raw material of his/her choice
+3. Tierra contacts delivery services and ensures safe and hurdle free delivery.
+4. Both User and Seller can track the product until it gets delivered.
 
 ## Long description
 
@@ -53,7 +53,7 @@ The project currently does the following things.
 - Feature 2
 - Feature 3
 
-It's in a free tier IBM Cloud Kubernetes cluster. In the future we plan to run on Red Hat OpenShift, for example.
+The website is almost functional with a few logistically critical features to be added like a payment gateway and a delivery service provider. We also need to create an organizational and financial structure once we decide to launch it. We intend to launch a beta version first to gather the responses and remove any issues that might arise. 
 
 See below for our proposed schedule on next steps after Call for Code 2021 submission.
 
