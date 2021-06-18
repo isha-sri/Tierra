@@ -51,9 +51,9 @@ We believe that nature preservation isn’t limited to curbing pollution and min
 
 The project currently does the following things.
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Buyer can buy product of its choice, and add the product to the cart do the payment and buy product.
+- Seller can add products of his choice, and keep it for sale.
+- Database in connected to the website using cloudant and cloud foundry. Auth feature is added to the website to maintain authenticity.
 
 The website is almost functional with a few logistically critical features to be added like a payment gateway and a delivery service provider. We also need to create an organizational and financial structure once we decide to launch it. We intend to launch a beta version first to gather the responses and remove any issues that might arise. 
 
