@@ -4,10 +4,11 @@ const bodyParser= require("body-parser");
 const ejs = require("ejs");
 const passport = require('passport');
 const passportSell = require('passport');
+const GoogleStrategy = require('passport-google-oauth2').Strategy;
+const GoogleStrategySell = require('passport-google-oauth2').Strategy;
 const https=require("https");
 const requesthttps=require("request");
 const cookieSession = require('cookie-session')
-require('./passport');
 const app= express();
 var _ = require('lodash');
 
@@ -58,6 +59,28 @@ app.get("/ourteam", function(req, res){
 // app.get("/itemDetails/", function(req, res){
 //   res.render("itemDetails");
 // })
+
+passport.serializeUser(function(user, done) {
+    
+  done(null, user);
+});
+
+passport.deserializeUser(function(user, done) {
+  
+  done(null, user);
+});
+
+passport.use(new GoogleStrategy({
+  clientID:process.env.GOOGLE_CLIENT_ID,
+  clientSecret:process.env.GOOGLE_CLIENT_SECRET,
+  callbackURL: "http://localhost:3000/auth/google/login",
+  passReqToCallback:true
+},
+function(request, accessToken, refreshToken, profile, done) {
+  console.log(profile)
+  return done(null, profile);
+}
+));
 app.get("/success", function(req, res){
   res.render("success", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
 })
@@ -65,6 +88,7 @@ app.get("/cart", function(req, res){
 
   res.render("cart", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
 })
+
 
 app.post("/cart", function(req, res){
 let qty1= req.body.item1;
