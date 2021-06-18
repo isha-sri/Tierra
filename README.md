@@ -32,7 +32,7 @@ We believe that nature preservation isn’t limited to curbing pollution and min
 
 ## Demo video
 
-[![Watch the video](https://github.com/Call-for-Code/Liquid-Prep/blob/master/images/readme/IBM-interview-video-image.png)](https://www.youtube.com/watch?v=qwEW4K0dW_w)
+[![Watch the video]](https://www.youtube.com/watch?v=qwEW4K0dW_w)
 
 ## The architecture
 
