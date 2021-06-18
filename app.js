@@ -40,8 +40,11 @@ const isLoggedIn = (req, res, next) => {
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.get("/", function(req,res){
+  res.render("splashScreen");
+})
 
-app.get("/", function(req, res){
+app.get("/home", function(req, res){
   res.render("home");
 })
 // app.get("/shop/", function(req, res){

@@ -2,6 +2,16 @@
 body {
 	background: #C0DEC8;
 	font-family: 'Roboto Condensed', sans-serif;
+	overflow-x: hidden;
+	scroll-behavior: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
 }
 
 .container {
