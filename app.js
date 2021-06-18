@@ -134,10 +134,10 @@ app.get("/address", function(req, res){
   res.render("address", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
 })
 app.get("/sellerinfo", function(req, res){
-  res.render("sellerinfo", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
+  res.render("sellerinfo");
 })
 app.get("/login-seller", function(req, res){
-  res.render("login-seller", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
+  res.render("login-seller");
 })
 
 // For shopping
