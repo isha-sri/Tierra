@@ -62,8 +62,65 @@ app.get("/success", function(req, res){
   res.render("success", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
 })
 app.get("/cart", function(req, res){
+
   res.render("cart", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
 })
+
+app.post("/cart", function(req, res){
+  const qty1= req.body.item1;
+  const qty2= req.body.item2;
+  const qty3 = req.body.item3;
+  console.log(qty2);
+  console.log(qty3);
+  console.log(qty1);
+  console.log("okay");
+    cloudant();
+    async function cloudant(){
+      try{
+        console.log("Creating connection with cloudant");
+        const cloudant = Cloudant({
+          url:"https://apikey-v2-30antvp518qnsh4ux4q2218mk91575x2m0p4roj9etbq:3965297d74db5784786a8e3ba733ab15@b68c0960-fa04-4283-be08-958102c4c93b-bluemix.cloudantnosqldb.appdomain.cloud",
+          plugins: {
+            iamauth:{
+              iamApiKey : "dXx8hWWm2oEoYffAXHT39ybXWmD_irXNuvJRubOrAmNo"
+            }
+          }
+        })
+      console.log("Getting cloudant dbs...");
+
+      const db = cloudant.db.use("customer-info");
+      let res="";
+
+      db.find({selector:{email:req.user.emails[0].value}}, function(er, result) {
+        if (result.docs.length) {
+          let idno= result.docs[0]._id;
+          let rev = result.docs[0]._rev;
+          console.log(result);
+          console.log(idno)
+          cloudant();
+          async function cloudant(){
+          const customer_info = {
+            "_id": idno,
+            "_rev":rev,
+            "quantity" :[qty1, qty2, qty3]
+          };
+          res= await db.insert(customer_info);
+          console.log("Added successfully to the database"+ res);
+          console.log(res);
+  }
+    }
+      });
+
+    }catch(err){
+      console.log(err);
+    }
+
+  }
+  res.redirect("/address")
+})
+
+
+
 app.get("/sell", function(req, res){
   res.render("sell");
 })
@@ -163,7 +220,8 @@ app.get("/shop/catDetails/:item", function(req, res){
 })
 
 app.get("/shop/catDetails/:detail/itemDetails", function(req, res){
-  res.render("itemDetails", {name:"Hello " +name, pic:pic, image:"/images/IM3.jpeg", image2:"/images/IM2.jpeg"});
+  var itemName= req.params.detail;
+  res.render("itemDetails", {name:"Hello " +name, pic:pic, image:"/images/IM3.jpeg", image2:"/images/IM2.jpeg", itemName:itemName});
 })
 
 
