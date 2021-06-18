@@ -207,6 +207,9 @@ app.get('/auth/google/login', passport.authenticate('google', { failureRedirect:
   }
 );
 
+app.post("/sellerinfo", function(req,res){
+  res.render("submitted");
+})
 
 
 
