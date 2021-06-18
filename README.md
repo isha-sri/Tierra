@@ -1,5 +1,5 @@
 # Tierra
-Production of waste materials is increasing everyday. This waste can be recycled and upcycled but there is no appropriate way in which we can ensure that our waste is put to better use. If we are able to address the issue of waste management by connecting people who find such products useful in one way or the other, we can build a more sustainable environment.
+Production of waste materials is increasing everyday. This waste can be recycled and upcycled but there is no appropriate way in which we can ensure that waste is put to better use. If we are able to address the issue of waste management by connecting people who find such products useful in one way or the other, we can build a more sustainable environment.
 
 ## Contents
 
