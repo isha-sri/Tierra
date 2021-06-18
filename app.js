@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
 
 let name="";
 let pic="";
-
+let qty=[];
 app.use(cookieSession({
   name: 'tuto-session',
   keys: ['key1', 'key2']
@@ -67,13 +67,10 @@ app.get("/cart", function(req, res){
 })
 
 app.post("/cart", function(req, res){
-  const qty1= req.body.item1;
-  const qty2= req.body.item2;
-  const qty3 = req.body.item3;
-  console.log(qty2);
-  console.log(qty3);
-  console.log(qty1);
-  console.log("okay");
+let qty1= req.body.item1;
+let qty2= req.body.item2;
+let qty3= req.body.item3;
+qty=[qty1, qty2, qty3];
     cloudant();
     async function cloudant(){
       try{
@@ -102,6 +99,8 @@ app.post("/cart", function(req, res){
           const customer_info = {
             "_id": idno,
             "_rev":rev,
+            "name": req.user.displayName,
+            "email": req.user.emails[0].value,
             "quantity" :[qty1, qty2, qty3]
           };
           res= await db.insert(customer_info);
@@ -116,7 +115,7 @@ app.post("/cart", function(req, res){
     }
 
   }
-  res.redirect("/address")
+  res.redirect("/address");
 })
 
 
@@ -133,6 +132,62 @@ app.get("/payment", function(req, res){
 app.get("/address", function(req, res){
   res.render("address", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
 })
+
+app.post("/address", function(req,res){
+
+  cloudant();
+  async function cloudant(){
+    try{
+      console.log("Creating connection with cloudant");
+      const cloudant = Cloudant({
+        url:"https://apikey-v2-30antvp518qnsh4ux4q2218mk91575x2m0p4roj9etbq:3965297d74db5784786a8e3ba733ab15@b68c0960-fa04-4283-be08-958102c4c93b-bluemix.cloudantnosqldb.appdomain.cloud",
+        plugins: {
+          iamauth:{
+            iamApiKey : "dXx8hWWm2oEoYffAXHT39ybXWmD_irXNuvJRubOrAmNo"
+          }
+        }
+      })
+    console.log("Getting cloudant dbs...");
+
+    const db = cloudant.db.use("customer-info");
+    let res="";
+
+    db.find({selector:{email:req.user.emails[0].value}}, function(er, result) {
+      if (result.docs.length) {
+        let idno= result.docs[0]._id;
+        let rev = result.docs[0]._rev;
+        console.log(result);
+        console.log(idno)
+        cloudant();
+        async function cloudant(){
+        const customer_info = {
+          "_id": idno,
+          "_rev":rev,
+          "name": req.user.displayName,
+          "email": req.user.emails[0].value,
+          "quantity" :qty,
+          "address" : [req.body.addressLine1, req.body.addressLine2],
+          "location":[req.body.city, req.body.state],
+          "pincode":req.body.pincode
+        };
+        res= await db.insert(customer_info);
+        console.log("Added successfully to the database"+ res);
+        console.log(res);
+}
+  }
+    });
+
+  }catch(err){
+    console.log(err);
+  }
+
+}
+
+res.redirect("/payment");
+
+})
+
+
 app.get("/sellerinfo", function(req, res){
   res.render("sellerinfo");
 })
@@ -169,7 +224,6 @@ app.get('/good', isLoggedIn, (req, res) =>{
       if (result.docs.length) {
   console.log("Already exists");
   console.log(result);
-  console.log(Object.keys(result).length);
   }else{
    console.log("new database created");
    cloudant();
@@ -178,8 +232,8 @@ app.get('/good', isLoggedIn, (req, res) =>{
        "_id":uuidv4(),
        "name": req.user.displayName,
        "email": req.user.emails[0].value,
-       "product_id": 8000,
-       "qty": 10
+       payment: "nil"
+
      };
      res= await db.insert(customer_info);
      console.log("Added successfully to the database"+ res);
