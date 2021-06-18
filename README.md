@@ -45,7 +45,7 @@ We believe that nature preservation isn’t limited to curbing pollution and min
 
 ## Long description
 
-[More detail is available here](./docs/DESCRIPTION.md)
+[More detail is available here](./docs/tierra.pdf)
 
 ## Project roadmap
 
@@ -63,7 +63,7 @@ See below for our proposed schedule on next steps after Call for Code 2021 submi
 
 ## Live demo
 
-You can find a running system to test at [callforcode.mybluemix.net](http://callforcode.mybluemix.net/).
+You can find a running system to test at [our youtube channel](https://www.youtube.com/watch?v=qwEW4K0dW_w).
 
 ## Built with
 
