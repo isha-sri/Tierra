@@ -196,11 +196,11 @@ const options={
       console.log(JSON.parse(data));
       const code=response.statusCode;
       if(code==200){
-        res.render("submitted");
+        response.render("submitted");
 
       }
 else{
-res.render("tryagain");
+response.render("tryagain");
 }
     });
 
