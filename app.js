@@ -158,7 +158,7 @@ app.get("/shop/catDetails/:item", function(req, res){
   var price= req.body.price;
   console.log(price);
   console.log(request);
-  res.render("catDetails", {catName:_.upperCase(request)});
+  res.render("catDetails", {catName:_.upperCase(request), image: "/images/IM3", image2:"/images/IM2"});
 })
 
 app.get('/logout', (req, res) => {
