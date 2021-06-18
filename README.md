@@ -69,7 +69,7 @@ You can find a running system to test at [callforcode.mybluemix.net](http://call
 
 - [IBM Cloudant](https://cloud.ibm.com/catalog?search=cloudant#search_results) - The NoSQL database used
 - [IBM Cloud Foundry](https://cloud.ibm.com/catalog?search=cloud%20functions#search_results) - Cloud to host website
-- Google Developer Console
+- Google Developer Console for authorization login
 
 ## Authors
 
