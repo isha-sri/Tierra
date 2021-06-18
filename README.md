@@ -73,7 +73,9 @@ You can find a running system to test at [website](https://tierraweb.herokuapp.c
 
 ## Authors
 
-<a href="https://github.com/isha-sri/Tierra">
-  <img src="https://contributors-img.web.app/image?repo=isha-sri/Tierra" />
-</a>
+1. Anvesha Dubey
+2. Nehal Gupta
+3. Isha Srivastava
+4. Kajal Kukreja
+5. Shruti Gangwar
 
