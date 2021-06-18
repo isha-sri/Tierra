@@ -8,30 +8,41 @@ body {
 nav{
     padding-right: 1.5%;
   }
-  
+
   .logo{
     width: 10%;
   }
-  
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover{
+    text-decoration: none;
+    color: black;
+
+  }
+
   .brand-Name{
     color: #5C8D89;
     font-size: 1.6rem;
     text-decoration: none;
     font-weight: bold;
   }
-  
+
   .navbar-item{
     padding: 2px;
     font-size: 0.8rem;
   }
-  
+
   .start{
     background-color: #E9F3EC;
     background-image: url("/images/Artboard.svg");
     background-repeat: no-repeat;
     padding-bottom: 3%;
   }
-  
+
   .btn-warning{
     color: white;
     font-size: 0.8rem;
@@ -42,7 +53,7 @@ nav{
       padding: 50px;
       margin-top: 40px;
       width: 130%;
-  
+
   }
 
   .btn-primary {
@@ -58,4 +69,3 @@ nav{
     border-color:#6fa195;
     color: black;
   }
-

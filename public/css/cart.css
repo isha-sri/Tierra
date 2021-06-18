@@ -24,7 +24,16 @@ body{
     background-color: #E9F3EC;
     padding-bottom: 0%;
   }
+  a{
+    text-decoration: none;
+    color: black;
+  }
 
+  a:hover{
+    text-decoration: none;
+    color: black;
+
+  }
   .logo{
     width: 10%;
   }
@@ -266,4 +275,3 @@ body{
       display: none;
     }
   }
-  

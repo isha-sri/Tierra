@@ -110,7 +110,9 @@ line-height: 42px;
 
 }
 
-
+a:hover{
+  text-decoration: none;
+}
 
 .card-img-top{
   width:100%;

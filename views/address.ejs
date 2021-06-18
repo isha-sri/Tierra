@@ -17,7 +17,9 @@
             <li class="navbar-item"><a class="nav-link" href="/sell">SELL</a></li>
             <li class="navbar-item"><a class="nav-link" href="/ourteam">TEAM</a></li>
             <li class="navbar-item"><a class="nav-link" href="/payment">TEAM</a></li>
-            <li class="navbar-item"><button type="button" class="btn btn-warning">SIGN IN</button></li>
+            <li class="navbar-item"><button type="button" class="btn btn-warning"> <%=name%></button></li>
+            <li class="navbar-item"><img src="<%=pic%>" width="40" height="40" alt=""></li>
+            <li class="navbar-item"><a href="/logout" class="btn btn-default btn-sm">Logout</a></li>
 
           </ul>
         </div>
@@ -26,12 +28,12 @@
   </section>
 
 		<div class="col-md-4 container bg-default">
-			
+
             <section id="address">
 			<h4 class="my-4">
 					Billing Address
 			</h4>
-			
+
 			<form>
 				<div class="form-row">
 					<div class="col-md-6 form-group">
@@ -56,7 +58,7 @@
 						<div class="input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text">@</span>
-							</div>	
+							</div>
 							<input type="text" class="form-control" id="username" placeholder="Username" required>
 							<div class="invalid-feedback">
 								Your username is required.
@@ -111,7 +113,7 @@
 							Please provide a valid city.
 						</div>
 					</div>
-						
+
 					<div class="col-md-4 form-group">
 						<label for="postcode">Pincode</label>
 						<select type="text" class="form-control" id="postcode">
@@ -126,9 +128,9 @@
 				</div>
 
 				<hr>
-				
+
 				<div class="form-check">
-					<input type="checkbox" class="form-check-input" id="shipping-adress"> 
+					<input type="checkbox" class="form-check-input" id="shipping-adress">
 						Shipping address is the same as my billing address
 					<label for="shipping-adress" class="form-check-label"></label>
 				</div>
@@ -136,13 +138,13 @@
 				<div class="form-check">
 					<input type="checkbox" class="form-check-input" id="same-adress">
 						Save this information for next time
-					<label for="same-adress" class="form-check-label"></label>					
+					<label for="same-adress" class="form-check-label"></label>
 					</div>
-
+	</form>
                 </section>
-                <button class="btn btn-primary bt-lg btn-block" type="submit">Continue</button>
-			</form>
+                <a href="/payment"><button class="btn btn-primary bt-lg btn-block" type="submit">Continue</button></a>
+
 		</div>
-  
+
 </body>
 </html>

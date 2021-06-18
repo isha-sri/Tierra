@@ -16,6 +16,9 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+let name="";
+let pic="";
+
 app.use(cookieSession({
   name: 'tuto-session',
   keys: ['key1', 'key2']
@@ -44,29 +47,29 @@ app.get("/", function(req, res){
 // app.get("/shop/", function(req, res){
 //   res.render("shop");
 // })
-app.get("/ourteam/", function(req, res){
+app.get("/ourteam", function(req, res){
   res.render("ourteam");
 })
 // app.get("/itemDetails/", function(req, res){
 //   res.render("itemDetails");
 // })
-app.get("/success/", function(req, res){
-  res.render("success");
+app.get("/success", function(req, res){
+  res.render("success", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
 })
-app.get("/cart/", function(req, res){
-  res.render("cart");
+app.get("/cart", function(req, res){
+  res.render("cart", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
 })
-app.get("/sell/", function(req, res){
+app.get("/sell", function(req, res){
   res.render("sell");
 })
-app.get("/sellform/", function(req, res){
+app.get("/sellform", function(req, res){
   res.render("sellform");
 })
-app.get("/payment/", function(req, res){
-  res.render("payment");
+app.get("/payment", function(req, res){
+  res.render("payment", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
 })
-app.get("/address/", function(req, res){
-  res.render("address");
+app.get("/address", function(req, res){
+  res.render("address", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
 })
 // For shopping
 app.get('/shop', (req, res) => res.render('login'))
@@ -122,6 +125,8 @@ app.get('/good', isLoggedIn, (req, res) =>{
   }
 
   res.render("shop",{name:"Hello "+ req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value})
+name=  req.user.displayName;
+pic=req.user.photos[0].value;
 })
 
 app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
@@ -158,7 +163,12 @@ app.get("/shop/catDetails/:item", function(req, res){
   var price= req.body.price;
   console.log(price);
   console.log(request);
-  res.render("catDetails", {catName:_.upperCase(request), image: "/images/IM3", image2:"/images/IM2"});
+  console.log(name);
+  res.render("catDetails", {name:"Hello " +name, pic:pic, catName:_.upperCase(request), image: "/images/IM3", image2:"/images/IM2"});
+})
+
+app.get("/shop/catDetails/:detail/itemDetails", function(req, res){
+  res.render("itemDetails", {name:"Hello " +name, pic:pic, image:"/images/IM3.jpeg", image2:"/images/IM2.jpeg"});
 })
 
 app.get('/logout', (req, res) => {
