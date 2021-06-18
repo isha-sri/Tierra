@@ -4,6 +4,8 @@ const bodyParser= require("body-parser");
 const ejs = require("ejs");
 const passport = require('passport');
 const passportSell = require('passport');
+const https=require("https");
+const requesthttps=require("request");
 const cookieSession = require('cookie-session')
 require('./passport');
 const app= express();
@@ -74,6 +76,13 @@ app.get("/payment", function(req, res){
 app.get("/address", function(req, res){
   res.render("address", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
 })
+app.get("/sellerinfo", function(req, res){
+  res.render("sellerinfo", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
+})
+app.get("/login-seller", function(req, res){
+  res.render("login-seller", {name: req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value});
+})
+
 // For shopping
 app.get('/shop', (req, res) => res.render('login'))
 app.get('/failed', (req, res) => res.send('You Failed to log in!'))
@@ -141,24 +150,7 @@ app.get('/auth/google/login', passport.authenticate('google', { failureRedirect:
   }
 );
 
-// For selling
-// app.get('/sell', (req, res) => res.render('login-seller'))
-// app.get('/failed', (req, res) => res.send('You Failed to log in!'))
 
-
-// app.get('/good-seller', isLoggedIn, (req, res) =>{
-
-//   res.render("sell",{name:"Hello "+ req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value})
-// })
-
-// app.get('/auth/google-seller', passportSell.authenticate('google', { scope: ['profile', 'email'] }));
-
-// app.get('/auth/google-seller/login-seller', passportSell.authenticate('google', { failureRedirect: '/failed' }),
-//   function(req, res) {
-//     // Successful authentication, redirect home.
-//     res.redirect('/good-seller');
-//   }
-// );
 
 
 app.get("/shop/catDetails/:item", function(req, res){
@@ -173,6 +165,54 @@ app.get("/shop/catDetails/:item", function(req, res){
 app.get("/shop/catDetails/:detail/itemDetails", function(req, res){
   res.render("itemDetails", {name:"Hello " +name, pic:pic, image:"/images/IM3.jpeg", image2:"/images/IM2.jpeg"});
 })
+
+
+//seller-submission
+app.post("/sellerinfo", function(req,response){
+  const fname=req.body.First;
+  const lname=req.body.Last;
+
+  const email=req.body.ID;
+
+  const data={
+    members:[{
+      email_address:email,
+      status:"subscribed",
+      merge_fields:{
+
+      FNAME:fname,
+      LNAME:lname
+    }
+  }]
+
+};
+const jsonData=JSON.stringify(data);
+const url="https://us10.api.mailchimp.com/3.0/lists/6de15ce78e";
+const options={
+  method:"POST",
+  auth:"isha12:bcc35ec6d657bc388c593698895d537b-us10"};
+  const requesthttps=https.request(url,options, function(response){
+    response.on("data",function(data){
+      console.log(JSON.parse(data));
+      const code=response.statusCode;
+      if(code==200){
+        res.render("submitted");
+
+      }
+else{
+res.render("tryagain");
+}
+    });
+
+  });
+  //request.write(jsonData);
+  requesthttps.end();
+});
+
+//seller-submission till here
+
+
+
 
 app.get('/logout', (req, res) => {
   req.session = null;
