@@ -55,17 +55,24 @@ nav{
   font-family: 'Raleway', sans-serif;
   font-weight: normal;
   line-height: 1.6;
-  margin-right: 277px;
+ margin-right: 277px;
 }
 
 .habit{
   color: black !important;
-  font-size: 1rem;
-}
+  font-size: 0.8rem;
 
+}
+#title{
+  width:50%;
+  height:300px;
+}
 .two{
   text-align: center;
   padding-top: 40px;
+  margin-left: 370px;
+  
+  
 }
 
 .three{
@@ -76,7 +83,7 @@ nav{
 }
 .steps{
   margin-top: 20px;
-  padding-top: 20px;
+  padding-top: 50px;
   padding-left: 20px;
   font-size:2rem;
 }
@@ -131,6 +138,31 @@ line-height: 20px;
   background-color: #74B49B;
   color: white;
 }
+.twoimg{
+  width:50%;
+  display: block;
+  margin:auto;
+  margin-left: -40px;
+  transform: translateY(-50%);
+  
+}
+#rules{
+display: inline-block;
+height: 100%;
+width: 100%
+
+
+
+}
+.mailimg{
+  
+  
+  transform: translateY(-50%);
+}
+.positionimg{
+  height: 200px;
+}
+
 
 
  
