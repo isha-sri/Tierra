@@ -59,7 +59,7 @@ The website is almost functional with a few logistically critical features to be
 
 See below for our proposed schedule on next steps after Call for Code 2021 submission.
 
-![Roadmap](./images/roadmap.jpg)
+<img src="https://user-images.githubusercontent.com/61119403/122589588-13b4ba00-d07e-11eb-9349-7b2df1d08fba.png" width=47%/> 
 
 ## Live demo
 
@@ -68,11 +68,8 @@ You can find a running system to test at [callforcode.mybluemix.net](http://call
 ## Built with
 
 - [IBM Cloudant](https://cloud.ibm.com/catalog?search=cloudant#search_results) - The NoSQL database used
-- [IBM Cloud Functions](https://cloud.ibm.com/catalog?search=cloud%20functions#search_results) - The compute platform for handing logic
-- [IBM API Connect](https://cloud.ibm.com/catalog?search=api%20connect#search_results) - The web framework used
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [Maven](https://maven.apache.org/) - Dependency management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+- [IBM Cloud Foundry](https://cloud.ibm.com/catalog?search=cloud%20functions#search_results) - Cloud to host website
+- Google Developer Console
 
 ## Authors
 
