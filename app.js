@@ -225,49 +225,6 @@ app.get("/shop/catDetails/:detail/itemDetails", function(req, res){
 })
 
 
-//seller-submission
-app.post("/sellerinfo", function(req,response){
-  const fname=req.body.First;
-  const lname=req.body.Last;
-
-  const email=req.body.ID;
-
-  const data={
-    members:[{
-      email_address:email,
-      status:"subscribed",
-      merge_fields:{
-
-      FNAME:fname,
-      LNAME:lname
-    }
-  }]
-
-};
-const jsonData=JSON.stringify(data);
-const url="https://us10.api.mailchimp.com/3.0/lists/6de15ce78e";
-const options={
-  method:"POST",
-  auth:"isha12:bcc35ec6d657bc388c593698895d537b-us10"};
-  const requesthttps=https.request(url,options, function(response){
-    response.on("data",function(data){
-      console.log(JSON.parse(data));
-      const code=response.statusCode;
-      if(code==200){
-        response.render("submitted");
-
-      }
-else{
-response.render("tryagain");
-}
-    });
-
-  });
-  //request.write(jsonData);
-  requesthttps.end();
-});
-
-//seller-submission till here
 
 
 
