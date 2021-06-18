@@ -105,6 +105,7 @@ line-height: 42px;
     border:none;
     margin-left: 12%;
     margin-bottom: 10%;
+    color: black;
 
 }
 
@@ -204,7 +205,7 @@ margin: 2%;
   font-size: 0.7rem;
 }
 
- 
+
 @media screen and (max-width: 990px) {
 .shop{
 margin-left:auto;

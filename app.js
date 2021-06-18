@@ -7,9 +7,14 @@ const passportSell = require('passport');
 const cookieSession = require('cookie-session')
 require('./passport');
 const app= express();
+var _ = require('lodash');
 
 const Cloudant = require("@cloudant/cloudant");
 const { v4: uuidv4 } = require('uuid');
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.use(cookieSession({
   name: 'tuto-session',
@@ -42,9 +47,9 @@ app.get("/", function(req, res){
 app.get("/ourteam/", function(req, res){
   res.render("ourteam");
 })
-app.get("/itemDetails/", function(req, res){
-  res.render("itemDetails");
-})
+// app.get("/itemDetails/", function(req, res){
+//   res.render("itemDetails");
+// })
 app.get("/success/", function(req, res){
   res.render("success");
 })
@@ -146,6 +151,15 @@ app.get('/auth/google/login', passport.authenticate('google', { failureRedirect:
 //     res.redirect('/good-seller');
 //   }
 // );
+
+
+app.get("/shop/catDetails/:item", function(req, res){
+  var request = req.params.item;
+  var price= req.body.price;
+  console.log(price);
+  console.log(request);
+  res.render("catDetails", {catName:_.upperCase(request)});
+})
 
 app.get('/logout', (req, res) => {
   req.session = null;
