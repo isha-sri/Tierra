@@ -14,7 +14,7 @@ Production of waste materials is increasing everyday. This waste can be recycled
   - [Project roadmap](#project-roadmap)
   - [Authors](#authors)
 
-## Short description
+## Short description-
 
 ### What are we building?
 
