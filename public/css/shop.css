@@ -21,13 +21,17 @@ nav{
 
 .logo{
   width: 10%;
+  border-radius: 50%;
 }
+
 
 .brand-Name{
   color: #5C8D89;
   font-size: 1.6rem;
   text-decoration: none;
   font-weight: bold;
+ 
+  
 }
 
 .navbar-item{
