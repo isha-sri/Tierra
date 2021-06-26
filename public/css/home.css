@@ -237,7 +237,7 @@ font-size: 0.8rem;
 width:100%;
 background-color: #5C8D89;
 text-align: center;
-margin:auto;
+/* margin:auto; */
 padding:50px 200px;
 
 }
@@ -258,3 +258,14 @@ text-align: center;
 
 margin-bottom: 30px;
 }
+
+
+@media (max-width: 600px) {
+  .testimonial-card{
+    padding:10px 20px;
+  }
+  .about-image{
+    position:relative;
+    left:0%;
+  }
+  }
