@@ -264,8 +264,8 @@ margin-bottom: 30px;
   .testimonial-card{
     padding:10px 20px;
   }
-  .about-image{
-    position:relative;
-    left:0%;
+  .about-image img{
+    position: relative;
+    right:60%;
   }
   }
