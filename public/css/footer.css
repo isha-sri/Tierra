@@ -80,9 +80,7 @@ body {
     margin-left: 20px;
     display: none;
   }
-  img{
-    width: 70%;
-  }
+  
  /* MEDIA QUERIES */
 
 /*$container-max-widths: (
